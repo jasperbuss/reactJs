@@ -74,7 +74,7 @@ export default class Movies extends Component {
     return { totalCount: filtered.length, data: movies };
   };
 
-  //called everytime the state changes
+  //called everytime the state changes c
   render() {
     //  console.log("render");
 
