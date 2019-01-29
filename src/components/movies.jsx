@@ -9,6 +9,8 @@ import "./movies.css";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
 
+import Searchbar from "./search";
+
 export default class Movies extends Component {
   //centralized state
   state = {
@@ -101,6 +103,7 @@ export default class Movies extends Component {
         </div>
         <div className="col" id="col">
           <p> Showing {totalCount} movies </p>
+          <Searchbar />
           <MoviesTable
             movies={movies}
             sortColumn={sortColumn}
