@@ -74,18 +74,22 @@ export default class Movies extends Component {
     return { totalCount: filtered.length, data: movies };
   };
 
+  //called everytime the state changes
   render() {
-    console.log("render");
+    //  console.log("render");
 
     let { length: count } = this.state.movies;
 
     const { pageSize, currentPage, sortColumn } = this.state;
 
     if (count === 0) {
-      return <p>There are no videos in the Database</p>;
+      return <p>There are no videos </p>;
     }
 
     const { totalCount, data: movies } = this.getPagedData();
+
+    console.log(this.getPagedData().data);
+
     return (
       <div className="row">
         <div className="col-3">
@@ -97,7 +101,6 @@ export default class Movies extends Component {
         </div>
         <div className="col" id="col">
           <p> Showing {totalCount} movies </p>
-
           <MoviesTable
             movies={movies}
             sortColumn={sortColumn}

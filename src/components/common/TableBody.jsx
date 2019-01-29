@@ -7,7 +7,7 @@ class TableBody extends Component {
   renderCell = (item, column) => {
     if (column.content) return column.content(item); //renders the item, if exists
 
-    return _.get(item, column.path); //_.get(movies, targerProperty) nested!
+    return _.get(item, column.path); //_.get(movies, nestedtargetProperty)
   };
   render() {
     const { data, columns } = this.props;
